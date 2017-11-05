@@ -12,13 +12,6 @@
 #define BRIGHT_UP     KC_F19
 #define BRIGHT_DOWN   KC_F20
 
-// shortcuts
-#define NEXT_APP      LGUI(KC_TAB)
-#define PREV_APP      LGUI(LSFT(KC_TAB))
-#define CLOSE_WINDOW  LGUI(KC_W)
-#define NEXT_TAB      LCTL(KC_TAB)
-#define PREV_TAB      LCTL(LSFT(KC_TAB))
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Layer 0: Base layer
@@ -26,45 +19,45 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |   L2   |   1  |   2  |   3  |   4  |   5  |Cmd+X |           |Cmd+W |   6  |   7  |   8  |   9  |   0  |MacLock |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |  Tab   |   Q  |   W  |   E  |   R  |   T  |Cmd+C |           | Next |   Y  |   U  |   I  |   O  |   P  |Next Tab|
- * |--------+------+------+------+------+------|      |           |  app |------+------+------+------+------+--------|
- * |  Esc   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |Prev Tab|
- * |--------+------+------+------+------+------|Cmd+V |           | Prev |------+------+------+------+------+--------|
- * | Del/Lsh|   Z  |   X  |   C  |   V  |   B  |      |           |  app |   N  |   M  |   ,  |   .  |   /  | RShift |
+ * |  Tab   |   Q  |   W  |   E  |   R  |   T  |Cmd+C |           | Tab  |   Y  |   U  |   I  |   O  |   P  |        |
+ * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |Esc/Ctrl|   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |        |
+ * |--------+------+------+------+------+------|Cmd+V |           |Shift+|------+------+------+------+------+--------|
+ * | Del/Lsh|   Z  |   X  |   C  |   V  |   B  |      |           | tab  |   N  |   M  |   ,  |   .  |   /  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |  ~L2 |`/Ctrl| '/Alt| [/Cmd|   ]  |                                       |  ~L2 | Left | Down |  Up  | Right|
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,---------------.
- *                                        | Prev | Next |       | Mute |Play/Pau|
+ *                                        | Mute |Ply/Ps|       | Prev | Next   |
  *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      |Brigh+|       | Vol+ |        |      |
+ *                                 |      |      | Vol+ |       |Brigh+|        |      |
  *                                 |Bkspc/| Tab  |------|       |------|  Enter |Space/|
- *                                 | CMD  |      |Brigh-|       | Vol- |        | ~L1  |
+ *                                 | CMD  |      | Vol- |       |Brigh-|        | ~L1  |
  *                                 `--------------------'       `----------------------'
  */
 [BASE] = LAYOUT_ergodox(
       // left hand
       TG(NAVIG),    KC_1,         KC_2,         KC_3,         KC_4,         KC_5,         LGUI(KC_X),
       KC_TAB,       KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,         LGUI(KC_C),
-      KC_ESC,       KC_A,         KC_S,         KC_D,         KC_F,         KC_G,
+      CTL_T(KC_ESC),KC_A,         KC_S,         KC_D,         KC_F,         KC_G,
       SFT_T(KC_DEL),KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,         LGUI(KC_V),
       MO(NAVIG),    CTL_T(KC_GRV),ALT_T(KC_QUOT),GUI_T(KC_LBRC),KC_RBRC,
 
-                                                KC_MRWD,      KC_MFFD,
-                                                              BRIGHT_UP,
-                                  GUI_T(KC_BSPC),KC_TAB,      BRIGHT_DOWN,
+                                                KC__MUTE,     KC_MPLY,
+                                                              KC__VOLUP,
+                                  GUI_T(KC_BSPC),KC_TAB,      KC__VOLDOWN,
 
       // right hand
-      CLOSE_WINDOW, KC_6,         KC_7,         KC_8,         KC_9,         KC_0,         LCTL(LSFT(KC_POWER)),
-      NEXT_APP,     KC_Y,         KC_U,         KC_I,         KC_O,         KC_P,         NEXT_TAB,
-                    KC_H,         KC_J,         KC_K,         KC_L,         KC_SCOLON,    PREV_TAB,
-      PREV_APP,     KC_N,         KC_M,         KC_COMMA,     KC_DOT,       KC_SLASH,     KC_RSHIFT,
+      LGUI(KC_W),   KC_6,         KC_7,         KC_8,         KC_9,         KC_0,         LCTL(LSFT(KC_POWER)),
+      KC_TAB,       KC_Y,         KC_U,         KC_I,         KC_O,         KC_P,         KC_NO,
+                    KC_H,         KC_J,         KC_K,         KC_L,         KC_SCOLON,    KC_NO,
+      LSFT(KC_TAB), KC_N,         KC_M,         KC_COMMA,     KC_DOT,       KC_SLASH,     KC_RSHIFT,
                                   MO(NAVIG),    KC_LEFT,      KC_DOWN,      KC_UP,        KC_RIGHT,
 
                                   // KC__ only works on macOS
-                                  KC__MUTE,     KC_MPLY,
-                                  KC__VOLUP,
-                                  KC__VOLDOWN,  KC_ENTER,     LT(SYMBOLS,KC_SPACE)
+                                  KC_MRWD,      KC_MFFD,
+                                  BRIGHT_UP,
+                                  BRIGHT_DOWN,  KC_ENTER,     LT(SYMBOLS,KC_SPACE)
 ),
 
 /* Layer 1: Symbols layer
