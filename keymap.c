@@ -26,11 +26,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |   L2   |   1  |   2  |   3  |   4  |   5  |Cmd+X |           |Cmd+W |   6  |   7  |   8  |   9  |   0  |MacLock |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |  Del   |   Q  |   W  |   E  |   R  |   T  |Cmd+C |           | Next |   Y  |   U  |   I  |   O  |   P  |Next Tab|
+ * |  Tab   |   Q  |   W  |   E  |   R  |   T  |Cmd+C |           | Next |   Y  |   U  |   I  |   O  |   P  |Next Tab|
  * |--------+------+------+------+------+------|      |           |  app |------+------+------+------+------+--------|
  * |  Esc   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |Prev Tab|
  * |--------+------+------+------+------+------|Cmd+V |           | Prev |------+------+------+------+------+--------|
- * |Bspc/Lsh|Z/Ctrl| X/Alt| C/Cmd|   V  |   B  |      |           |  app |   N  |   M  |   ,  |   .  |   /  | RShift |
+ * | Del/Lsh|Z/Ctrl| X/Alt| C/Cmd|   V  |   B  |      |           |  app |   N  |   M  |   ,  |   .  |   /  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |  ~L2 |   `  |   '  |   [  |   ]  |                                       |  ~L2 | Left | Down |  Up  | Right|
  *   `----------------------------------'                                       `----------------------------------'
@@ -45,9 +45,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_ergodox(
       // left hand
       TG(NAVIG),    KC_1,         KC_2,         KC_3,         KC_4,         KC_5,         LGUI(KC_X),
-      KC_DELETE,    KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,         LGUI(KC_C),
+      KC_TAB,       KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,         LGUI(KC_C),
       KC_ESC,       KC_A,         KC_S,         KC_D,         KC_F,         KC_G,
-      SFT_T(KC_BSPC),CTL_T(KC_Z), ALT_T(KC_X),  GUI_T(KC_C),  KC_V,         KC_B,         LGUI(KC_V),
+      SFT_T(KC_DEL),CTL_T(KC_Z),  ALT_T(KC_X),  GUI_T(KC_C),  KC_V,         KC_B,         LGUI(KC_V),
       MO(NAVIG),    KC_GRAVE,     KC_QUOTE,     KC_LBRACKET,  KC_RBRACKET,
 
                                                 KC_MRWD,      KC_MFFD,
