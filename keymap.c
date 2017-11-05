@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        | Prev | Next |       | Mute |Play/Pau|
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      |Brigh+|       | Vol+ |        |      |
- *                                 |Space/| Tab  |------|       |------|  Enter |Space/|
+ *                                 |Bkspc/| Tab  |------|       |------|  Enter |Space/|
  *                                 | CMD  |      |Brigh-|       | Vol- |        | ~L1  |
  *                                 `--------------------'       `----------------------'
  */
@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                                 KC_MRWD,      KC_MFFD,
                                                               BRIGHT_UP,
-                                  GUI_T(KC_SPC),KC_TAB,       BRIGHT_DOWN,
+                                  GUI_T(KC_BSPC),KC_TAB,      BRIGHT_DOWN,
 
       // right hand
       CLOSE_WINDOW, KC_6,         KC_7,         KC_8,         KC_9,         KC_0,         LCTL(LSFT(KC_POWER)),
