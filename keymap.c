@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   GUI_T(KC_SPC),KC_TAB,       BRIGHT_DOWN,
 
       // right hand
-      CLOSE_WINDOW, KC_6,         KC_7,         KC_8,         KC_9,         KC_0,         CTL_T(SFT_T(KC_POWER)),
+      CLOSE_WINDOW, KC_6,         KC_7,         KC_8,         KC_9,         KC_0,         LCTL(LSFT(KC_POWER)),
       NEXT_APP,     KC_Y,         KC_U,         KC_I,         KC_O,         KC_P,         NEXT_TAB,
                     KC_H,         KC_J,         KC_K,         KC_L,         KC_SCOLON,    PREV_TAB,
       PREV_APP,     KC_N,         KC_M,         KC_COMMA,     KC_DOT,       KC_SLASH,     KC_RSHIFT,
