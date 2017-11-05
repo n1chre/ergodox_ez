@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|Cmd+V |           |Shift+|------+------+------+------+------+--------|
  * | Del/Lsh|   Z  |   X  |   C  |   V  |   B  |      |           | tab  |   N  |   M  |   ,  |   .  |   /  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |  ~L2 |`/Ctrl| '/Alt| [/Cmd|   ]  |                                       |  ~L2 | Left | Down |  Up  | Right|
+ *   |  ~L2 |'/Ctrl| `/Alt| [/Cmd|   ]  |                                       |  ~L2 | Left | Down |  Up  | Right|
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,---------------.
  *                                        |Ply/Ps| Mute |       | Prev | Next   |
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB,       KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,         LGUI(KC_C),
       CTL_T(KC_ESC),KC_A,         KC_S,         KC_D,         KC_F,         KC_G,
       SFT_T(KC_DEL),KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,         LGUI(KC_V),
-      MO(NAVIG),    CTL_T(KC_GRV),ALT_T(KC_QUOT),GUI_T(KC_LBRC),KC_RBRC,
+      MO(NAVIG),    CTL_T(KC_QUOT),ALT_T(KC_GRV),GUI_T(KC_LBRC),KC_RBRC,
 
                                                 KC_MPLY,      KC__MUTE,
                                                               KC__VOLUP,
