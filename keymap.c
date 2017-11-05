@@ -30,9 +30,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |  app |------+------+------+------+------+--------|
  * |  Esc   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |Prev Tab|
  * |--------+------+------+------+------+------|Cmd+V |           | Prev |------+------+------+------+------+--------|
- * | Del/Lsh|Z/Ctrl| X/Alt| C/Cmd|   V  |   B  |      |           |  app |   N  |   M  |   ,  |   .  |   /  | RShift |
+ * | Del/Lsh|   Z  |   X  |   C  |   V  |   B  |      |           |  app |   N  |   M  |   ,  |   .  |   /  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |  ~L2 |   `  |   '  |   [  |   ]  |                                       |  ~L2 | Left | Down |  Up  | Right|
+ *   |  ~L2 |`/Ctrl| '/Alt| [/Cmd|   ]  |                                       |  ~L2 | Left | Down |  Up  | Right|
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,---------------.
  *                                        | Prev | Next |       | Mute |Play/Pau|
@@ -47,8 +47,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       TG(NAVIG),    KC_1,         KC_2,         KC_3,         KC_4,         KC_5,         LGUI(KC_X),
       KC_TAB,       KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,         LGUI(KC_C),
       KC_ESC,       KC_A,         KC_S,         KC_D,         KC_F,         KC_G,
-      SFT_T(KC_DEL),CTL_T(KC_Z),  ALT_T(KC_X),  GUI_T(KC_C),  KC_V,         KC_B,         LGUI(KC_V),
-      MO(NAVIG),    KC_GRAVE,     KC_QUOTE,     KC_LBRACKET,  KC_RBRACKET,
+      SFT_T(KC_DEL),KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,         LGUI(KC_V),
+      MO(NAVIG),    CTL_T(KC_GRV),ALT_T(KC_QUOT),GUI_T(KC_LBRC),KC_RBRC,
 
                                                 KC_MRWD,      KC_MFFD,
                                                               BRIGHT_UP,
@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   KC__VOLDOWN,  KC_ENTER,     LT(SYMBOLS,KC_SPACE)
 ),
 
-/* Layer 1: Symbols layer TODO fix
+/* Layer 1: Symbols layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |      |      |      |      |      |      |           |      |  F16 |  F17 |  F18 |  F19 |  F20 |  F21   |
