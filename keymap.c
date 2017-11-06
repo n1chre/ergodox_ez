@@ -21,9 +21,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |   L2   |   1  |   2  |   3  |   4  |   5  |Cmd+X |           |Cmd+W |   6  |   7  |   8  |   9  |   0  |  TODO  |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |  Tab   |   Q  |   W  |   E  |   R  |   T  |Cmd+C |           | ~L3  |   Y  |   U  |   I  |   O  |   P  |  Tab   |
+ * |  Tab   |   Q  |   W  |   E  |   R  |   T  |Cmd+C |           | ~L3  |   Y  |   U  |   I  |   O  |   P  | Sft+Tab|
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |Esc/Ctrl|   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  | Sft+Tab|
+ * |Esc/Ctrl|   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |  Tab   |
  * |--------+------+------+------+------+------|Cmd+V |           | ~L4  |------+------+------+------+------+--------|
  * | Del/Lsh|   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -33,8 +33,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        |Ply/Ps| Mute |       | Prev | Next   |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Vol+ |       |Brigh+|        |      |
- *                                 |Bkspc/| Tab  |------|       |------|  Enter |Space/|
- *                                 | CMD  |      | Vol- |       |Brigh-|        | ~L1  |
+ *                                 |Bkspc/| Tab/ |------|       |------| Enter/ |Space/|
+ *                                 | CMD  | Shft | Vol- |       |Brigh-|  Shft  | ~L1  |
  *                                 `--------------------'       `----------------------'
  */
 [L_BASE] = LAYOUT_ergodox(
@@ -48,18 +48,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                 // KC__ only works on macOS
                                                 KC_MPLY,      KC__MUTE,
                                                               KC__VOLUP,
-                                  GUI_T(KC_BSPC),KC_TAB,      KC__VOLDOWN,
+                                  GUI_T(KC_BSPC),SFT_T(KC_TAB),KC__VOLDOWN,
 
       // right hand
       LGUI(KC_W),   KC_6,         KC_7,         KC_8,         KC_9,         KC_0,         KC_NO,
-      MO(L_SHOR),   KC_Y,         KC_U,         KC_I,         KC_O,         KC_P,         KC_TAB,
-                    KC_H,         KC_J,         KC_K,         KC_L,         KC_SCOLON,    LSFT(KC_TAB),
+      MO(L_SHOR),   KC_Y,         KC_U,         KC_I,         KC_O,         KC_P,         LSFT(KC_TAB),
+                    KC_H,         KC_J,         KC_K,         KC_L,         KC_SCOLON,    KC_TAB,
       MO(L_FUNC),   KC_N,         KC_M,         KC_COMMA,     KC_DOT,       KC_SLASH,     KC_RSHIFT,
                                   MO(L_NAVI),   KC_LEFT,      KC_DOWN,      KC_UP,        KC_RIGHT,
 
                                   KC_MRWD,      KC_MFFD,
                                   BRIGHT_UP,
-                                  BRIGHT_DOWN,  KC_ENTER,     LT(L_SYMB,KC_SPACE)
+                                  BRIGHT_DOWN,  SFT_T(KC_ENT),LT(L_SYMB,KC_SPACE)
 ),
 
 /* Layer 1: Symbols layer
