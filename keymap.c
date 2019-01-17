@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           | Tab  |------+------+------+------+------+--------|
  * |Esc/Ctrl|   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |  ~L3   |
  * |--------+------+------+------+------+------|Cmd+V |           | Tab  |------+------+------+------+------+--------|
- * | LShft  |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  |  RShft |
+ * |LShft/( |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | RShft/)|
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |  ~L2 |  '   | `/Alt|  [   |]/Cmd |                                       | Cmd  |  ~L2 | Prev |Ply/Ps| Next |
  *   `----------------------------------'                                       `----------------------------------'
@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       TG(L_NAVI),   KC_1,         KC_2,         KC_3,         KC_4,         KC_5,         LGUI(KC_X),
       KC_TAB,       KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,         LGUI(KC_C),
       CTL_T(KC_ESC),KC_A,         KC_S,         KC_D,         KC_F,         KC_G,
-      KC_LSFT,      KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,         LGUI(KC_V),
+      KC_LSPO,      KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,         LGUI(KC_V),
       MO(L_NAVI),   KC_QUOT,      ALT_T(KC_GRV),KC_LBRC,      GUI_T(KC_RBRC),
 
                                                 KC_DEL,       KC__MUTE,
@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       LGUI(KC_W),   KC_6,         KC_7,         KC_8,         KC_9,         KC_0,         KC_NO,
       LSFT(KC_TAB), KC_Y,         KC_U,         KC_I,         KC_O,         KC_P,         KC_NO,
                     KC_H,         KC_J,         KC_K,         KC_L,         KC_SCOLON,    MO(L_SHOR),
-      KC_TAB,       KC_N,         KC_M,         KC_COMMA,     KC_DOT,       KC_SLASH,     KC_RSFT,
+      KC_TAB,       KC_N,         KC_M,         KC_COMMA,     KC_DOT,       KC_SLASH,     KC_RSPC,
                                   KC_RGUI,      MO(L_NAVI),   KC_MRWD,      KC_MPLY,      KC_MFFD,
 
                                   MO(L_FUNC),   MO(L_SHOR),
