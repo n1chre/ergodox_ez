@@ -10,6 +10,11 @@
 #define NO_PRINT
 #endif // NO_PRINT
 
+// this was deprecated
+#ifndef NO_ACTION_FUNCTION
+#define NO_ACTION_FUNCTION
+#endif // NO_ACTION_FUNCTION
+
 // how long before oneshot times out
 #ifdef ONESHOT_TIMEOUT
 #undef ONESHOT_TIMEOUT
