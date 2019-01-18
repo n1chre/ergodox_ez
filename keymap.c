@@ -31,8 +31,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        | Del  | Mute |       | ~L4  |  ~L3   |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Vol+ |       | Home |        |      |
- *                                 | Shift| Bspc/|------|       |------| Enter/ |Space/|
- *                                 |      |  Cmd | Vol- |       | End  |  Cmd   | ~L1  |
+ *                                 | Bspc/|  Cmd |------|       |------| Enter/ |Space/|
+ *                                 | Shift|      | Vol- |       | End  |  Cmd   | ~L1  |
  *                                 `--------------------'       `----------------------'
  */
 [L_BASE] = LAYOUT_ergodox(
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                                 KC_DEL,       KC__MUTE,
                                                               KC__VOLUP,
-                                  OSM(MOD_LSFT),GUI_T(KC_BSPC),KC__VOLDOWN,
+                                  LSFT_T(KC_BSPC),KC_LGUI,    KC__VOLDOWN,
 
       // right hand
       LGUI(KC_W),   KC_6,         KC_7,         KC_8,         KC_9,         KC_0,         KC_NO,
