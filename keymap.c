@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|Cmd+V |           |Shift+|------+------+------+------+------+--------|
  * |LShft/( |   Z  |   X  |   C  |   V  |   B  |      |           |  Tab |   N  |   M  |   ,  |   .  |   /  | RShft/)|
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |  ~L2 |  '   | `/Alt|  [   |]/Cmd |                                       | Cmd  |  ~L2 | Prev |Ply/Ps| Next |
+ *   |  ~L2 |  '   | `/Alt|  [   |]/Cmd |                                       |Cmd+Tb|  ~L2 | Prev |Ply/Ps| Next |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,---------------.
  *                                        | Del  | Mute |       | ~L4  |  ~L3   |
@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB,       KC_Y,         KC_U,         KC_I,         KC_O,         KC_P,         KC_NO,
                     KC_H,         KC_J,         KC_K,         KC_L,         KC_SCOLON,    MO(L_SHOR),
       LSFT(KC_TAB), KC_N,         KC_M,         KC_COMMA,     KC_DOT,       KC_SLASH,     KC_RSPC,
-                                  KC_RGUI,      MO(L_NAVI),   KC_MRWD,      KC_MPLY,      KC_MFFD,
+                                  LGUI(KC_TAB), MO(L_NAVI),   KC_MRWD,      KC_MPLY,      KC_MFFD,
 
                                   MO(L_FUNC),   MO(L_SHOR),
                                   KC_HOME,
