@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |   L2   |   1  |   2  |   3  |   4  |   5  |Cmd+X |           |Cmd+W |   6  |   7  |   8  |   9  |   0  |  TODO  |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |  Tab   |   Q  |   W  |   E  |   R  |   T  |Cmd+C |           |      |   Y  |   U  |   I  |   O  |   P  |  TODO  |
+ * |  Tab   |   Q  |   W  |   E  |   R  |   T  |Cmd+C |           |      |   Y  |   U  |   I  |   O  |   P  |  Bspc  |
  * |--------+------+------+------+------+------|      |           | Tab  |------+------+------+------+------+--------|
  * |Esc/Ctrl|   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |  ~L3   |
  * |--------+------+------+------+------+------|Cmd+V |           |Shift+|------+------+------+------+------+--------|
@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
       // right hand
       LGUI(KC_W),   KC_6,         KC_7,         KC_8,         KC_9,         KC_0,         KC_NO,
-      KC_TAB,       KC_Y,         KC_U,         KC_I,         KC_O,         KC_P,         KC_NO,
+      KC_TAB,       KC_Y,         KC_U,         KC_I,         KC_O,         KC_P,         KC_BSPC,
                     KC_H,         KC_J,         KC_K,         KC_L,         KC_SCOLON,    MO(L_SHOR),
       LSFT(KC_TAB), KC_N,         KC_M,         KC_COMMA,     KC_DOT,       KC_SLASH,     KC_RSPC,
                                   LGUI(KC_TAB), MO(L_NAVI),   KC_MRWD,      KC_MPLY,      KC_MFFD,
