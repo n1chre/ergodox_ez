@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Vol+ |       | Home |        |      |
  *                                 |Space/| Bspc/|------|       |------| Enter/ |Space/|
- *                                 | Shift| Cmd  | Vol- |       | End  |  Cmd   | ~L1  |
+ *                                 | Cmd  | Shift| Vol- |       | End  |  Shift | ~L1  |
  *                                 `--------------------'       `----------------------'
  */
 [L_BASE] = LAYOUT_ergodox(
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                                 KC_DEL,       KC__MUTE,
                                                               KC__VOLUP,
-                                  LSFT_T(KC_SPC),GUI_T(KC_BSPC),KC__VOLDOWN,
+                                  GUI_T(KC_SPC),LSFT_T(KC_BSPC),KC__VOLDOWN,
 
       // right hand
       LGUI(KC_W),   KC_6,         KC_7,         KC_8,         KC_9,         KC_0,         KC_NO,
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                   MO(L_FUNC),   MO(L_SHOR),
                                   KC_HOME,
-                                  KC_END,       GUI_T(KC_ENT),LT(L_SYMB,KC_SPC)
+                                  KC_END,       LSFT_T(KC_ENT),LT(L_SYMB,KC_SPC)
 ),
 
 /* Layer 1: Symbols layer
