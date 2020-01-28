@@ -150,16 +150,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 /* Layer 3: Shortcuts
+ * TODO: rectangle shortcuts shouldn't be a new layer. just make that key modify what ever is pressed by sending MEH + key
  *
- * Left hand is used for Spectacle window manager (https://www.spectacleapp.com)
- * mapping  ==>  ~/Library/Application\ Support/Spectacle/Shortcuts.json
+ * Left hand is used for Rectangle window manager (https://rectangleapp.com/)
  * F - full screen
  * U,D,L,R - up, down, left, right (UL = upper left)
+ * 1,2,3,4,5 - thirds (first left, first two left, center, first two right, first right)
  * N - next display
- * P - previsous display
+ * P - previous display
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+ * |        |   1  |   2  |   3  |   4  |   5  |      |           |      |      |      |      |      |      |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |        |      |  UL  |  U   |  UR  |      |      |           |      |      |      |      |      |      |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -179,7 +180,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [L_SHOR] = LAYOUT_ergodox(
   // left hand
-  ____________, ____________, ____________, ____________, ____________, ____________, ____________,
+  ____________, MEH(KC_1),    MEH(KC_2),    MEH(KC_3),    MEH(KC_4),    MEH(KC_5),    ____________,
   ____________, ____________, MEH(KC_W),    MEH(KC_E),    MEH(KC_R),    ____________, ____________,
   ____________, ____________, MEH(KC_S),    MEH(KC_D),    MEH(KC_F),    ____________,
   ____________, ____________, MEH(KC_X),    MEH(KC_C),    MEH(KC_V),    ____________, ____________,
