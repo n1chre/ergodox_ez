@@ -1,6 +1,9 @@
-![layouts](layouts1.png)
-![layouts](layouts2.png)
-![layouts](layouts3.png)
+## Layers
+0. Base + various mods
+1. Symbols
+2. Navigation (mouse and arrows)
+3. Tiling manager (Rectangle on Mac)
+4. Fn keys and misc
 
 ## QMK Configerator
 
